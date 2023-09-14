@@ -1,0 +1,123 @@
+body {
+    background-image: url('background.jpg'); /* Dreamy background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    font-family: 'Tahoma', sans-serif;
+    color: #333;
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+}
+
+/* ... Existing CSS styles ... */
+
+.emoji-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+    animation: moveEmoji 3s linear infinite;
+}
+
+/* ... Rest of your CSS ... */
+
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white container */
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.cat {
+    font-size: 24px;
+    color: #FF4081; /* Pinkish color */
+    margin-bottom: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.button {
+    background-color: #FF6E40; /* Orange button background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.heart-quote {
+    opacity: 0;
+    font-size: 18px;
+    color: #FF4081; /* Pinkish color */
+    margin-top: 20px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.ascii-cat {
+    font-family: monospace;
+    font-size: 24px;
+    white-space: pre;
+}
+
+/* ... Existing CSS styles ... */
+
+.emoji-rain {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    animation: moveEmoji 3s linear infinite;
+}
+
+@keyframes moveEmoji {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(-50%) translateY(100%);
+    }
+}
+
+.emoji {
+    font-size: 24px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: rotateEmoji 2s linear infinite, moveEmoji 3s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes rotateEmoji {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+/* ... Your existing CSS styles ... */
+
+.bounce {
+    animation-name: bounce;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
