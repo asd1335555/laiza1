@@ -1,5 +1,5 @@
 body {
-    background-image: url('background.jpg'); /* Dreamy background image */
+    background-image: linear-gradient(to bottom, #aaffdd, white);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
